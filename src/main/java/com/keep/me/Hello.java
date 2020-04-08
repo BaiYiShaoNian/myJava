@@ -112,6 +112,12 @@ public class Hello {
         System.out.println(user.getName());
         System.out.println(user.getStatus());
 
+
+        user = new User();
+        System.out.println(user);
+        System.out.println(user.getName());
+        System.out.println(user.getStatus());
+
     }
 
     public static List<String> collectLocalDates(String timeStart, String timeEnd){

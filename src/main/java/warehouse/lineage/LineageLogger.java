@@ -1,4 +1,4 @@
-package com.keep.warehouse.lineage;
+package warehouse.lineage;
 
 import org.apache.hadoop.hive.ql.hooks.ExecuteWithHookContext;
 import org.apache.hadoop.hive.ql.hooks.HookContext;
