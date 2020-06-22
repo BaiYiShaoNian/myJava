@@ -1,4 +1,4 @@
-package com.keep.warehouse.lineage;
+package com.warehouse.lineage;
 
 import org.apache.hadoop.hive.ql.hooks.ExecuteWithHookContext;
 import org.apache.hadoop.hive.ql.hooks.HookContext;
@@ -11,6 +11,7 @@ import java.util.Arrays;
 
 /**
  * Create by huangxuanfeng on 2020/4/3 下午2:31
+ * 数仓血缘关系解析
  */
 public class LineageLogger implements ExecuteWithHookContext {
 
@@ -40,7 +41,7 @@ public class LineageLogger implements ExecuteWithHookContext {
             String driver = "com.mysql.jdbc.Driver";
             String url = "jdbc:mysql://localhost:3306/test?useSSL=false";
             String user = "root";
-            String password = "123456";
+            String password = "12345";
             String sql = "insert into lineage_test (input_table, output_table) values (?,?)";
 
             try {

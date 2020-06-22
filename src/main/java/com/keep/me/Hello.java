@@ -7,14 +7,14 @@ import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.MessageFormat;
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
+//import java.time.LocalDate;
+//import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+//import java.util.stream.Collectors;
+//import java.util.stream.Stream;
 
 public class Hello {
 
@@ -23,11 +23,11 @@ public class Hello {
         list.add("huang"); list.add("xuan"); list.add("feng");
         System.out.println(list);
         int flag = -1;
-        list.forEach(x -> {
-            if (x.equals("huang")) {
-                //flag = 1;
-            }
-        });
+        //list.forEach(x -> {
+        //    if (x.equals("huang")) {
+        //        //flag = 1;
+        //    }
+        //});
 
         Abc abc = new Abc();
         abc.setName("huang");
@@ -51,28 +51,28 @@ public class Hello {
 
         StringBuilder sb = new StringBuilder();
 
-        list1.forEach(x -> {
-            sb.append("'" + x + "'");
-        });
+        //list1.forEach(x -> {
+        //    sb.append("'" + x + "'");
+        //});
         System.out.println(sb.toString());
 
         System.out.println(RandomStringUtils.randomAlphabetic(10));
 
-        List<String> list2 = collectLocalDates("2019-02-25", "2019-03-02");
-        list2.forEach(x -> System.out.println(x));
-
-        List<Map<String, Object>> columnList = new ArrayList<>(), dataList = new ArrayList<>();
-
-        collectLocalDates("2019-02-25", "2019-03-02").forEach(x -> {
-            Map<String, Object> map = new HashMap<>();
-            map.put("p_date", x);
-            dataList.add(map);
-        });
-        dataList.forEach(x -> System.out.println(x));
-        dataList.forEach(x -> {
-            x.put("paobu", 123);
-        });
-        dataList.forEach(x -> System.out.println(x));
+        //List<String> list2 = collectLocalDates("2019-02-25", "2019-03-02");
+        //list2.forEach(x -> System.out.println(x));
+        //
+        //List<Map<String, Object>> columnList = new ArrayList<>(), dataList = new ArrayList<>();
+        //
+        //collectLocalDates("2019-02-25", "2019-03-02").forEach(x -> {
+        //    Map<String, Object> map = new HashMap<>();
+        //    map.put("p_date", x);
+        //    dataList.add(map);
+        //});
+        //dataList.forEach(x -> System.out.println(x));
+        //dataList.forEach(x -> {
+        //    x.put("paobu", 123);
+        //});
+        //dataList.forEach(x -> System.out.println(x));
 
         Map<String, Object> map = new HashMap<>();
         map.put("keepvalue", 123);
@@ -116,9 +116,9 @@ public class Hello {
 
     }
 
-    public static List<String> collectLocalDates(String timeStart, String timeEnd){
-        return collectLocalDates(LocalDate.parse(timeStart), LocalDate.parse(timeEnd));
-    }
+    //public static List<String> collectLocalDates(String timeStart, String timeEnd){
+    //    return collectLocalDates(LocalDate.parse(timeStart), LocalDate.parse(timeEnd));
+    //}
 
     /**
      * 收集起始时间到结束时间之间所有的时间并以字符串集合方式返回
@@ -126,14 +126,14 @@ public class Hello {
      * @param end
      * @return
      */
-    public static List<String> collectLocalDates(LocalDate start, LocalDate end) {
-        // 用起始时间作为流的源头，按照每次加一天的方式创建一个无限流
-        return Stream.iterate(start, localDate -> localDate.plusDays(1))
-                // 截断无限流，长度为起始时间和结束时间的差+1个
-                .limit(ChronoUnit.DAYS.between(start, end) + 1)
-                // 由于最后要的是字符串，所以map转换一下
-                .map(LocalDate::toString)
-                // 把流收集为List
-                .collect(Collectors.toList());
-    }
+    //public static List<String> collectLocalDates(LocalDate start, LocalDate end) {
+    //    // 用起始时间作为流的源头，按照每次加一天的方式创建一个无限流
+    //    return Stream.iterate(start, localDate -> localDate.plusDays(1))
+    //            // 截断无限流，长度为起始时间和结束时间的差+1个
+    //            .limit(ChronoUnit.DAYS.between(start, end) + 1)
+    //            // 由于最后要的是字符串，所以map转换一下
+    //            .map(LocalDate::toString)
+    //            // 把流收集为List
+    //            .collect(Collectors.toList());
+    //}
 }
