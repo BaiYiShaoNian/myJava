@@ -12,6 +12,13 @@ import java.util.Set;
  */
 public class HelloWorld {
 
+    /**
+     * @see com.tools.LogTools
+     * @see MyEnum
+     * {@link MyEnum}
+     * {@link com.tools.FileTools}
+     * @param args
+     */
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         list.add(5);
