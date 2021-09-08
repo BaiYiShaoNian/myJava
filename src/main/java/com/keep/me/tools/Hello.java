@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.keep.me.ActionEvent;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -52,6 +53,10 @@ public class Hello {
     }
 
     public static void main(String[] args) {
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("h", "x");
+        System.out.println(map2.get("h") + " " + map2.get("x"));
+
         Hello.hh();
 
         Hello hello = new Hello();
@@ -74,7 +79,7 @@ public class Hello {
         System.out.println(def.getName());
 
         System.out.println("------ 分割线 ------");
-        KeepUser keepUser = new KeepUser();
+        KeepUser2 keepUser = new KeepUser2();
         keepUser.setName("huang xuanfeng");
         keepUser.setAge(27);
         System.out.println(keepUser.toString());
@@ -88,7 +93,15 @@ public class Hello {
             System.out.println(ae.getActionId());
         }
 
+        List<Integer> list = new ArrayList<>();
+        list.add(10); list.add(20);
+        System.out.println(list);
+        say(list);
+        System.out.println(list);
+    }
 
+    public static void say(List<Integer> list) {
+        list.add(900);
     }
 
 }

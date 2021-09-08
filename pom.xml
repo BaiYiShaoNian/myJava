@@ -79,6 +79,106 @@
       <artifactId>guava</artifactId>
       <version>${version.guava}</version>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.keep.commons</groupId>-->
+      <!--<artifactId>commons-utils</artifactId>-->
+      <!--<version>2.1.6</version>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>com.keep.commons</groupId>
+      <artifactId>commons-utils</artifactId>
+      <version>0.0.83</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>com.keep.commons</groupId>
+      <artifactId>commons-web</artifactId>
+      <version>0.0.83</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>25.1-jre</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.keep.boot</groupId>
+      <artifactId>keep-spring-boot-starter-mongo</artifactId>
+      <version>2.5.11</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.keep.ads</groupId>
+        <artifactId>keep-ads-common</artifactId>
+        <version>2.0.30.8.2-SNAPSHOT</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table -->
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-table</artifactId>
+      <version>1.12.2</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table-planner-blink -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-table-planner-blink_2.12</artifactId>
+      <version>1.12.2</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/org.wltea/analyzer -->
+    <!--<dependency>-->
+      <!--<groupId>org.wltea</groupId>-->
+      <!--<artifactId>analyzer</artifactId>-->
+      <!--<version>2012_u6</version>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+      <!--<groupId>com.keep.user.account</groupId>-->
+      <!--<artifactId>user-account-model</artifactId>-->
+      <!--<version>0.13.13</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>com.keep.user.account</groupId>-->
+      <!--<artifactId>user-account-rpc-service</artifactId>-->
+      <!--<version>0.2.12</version>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<artifactId>slf4j-log4j12</artifactId>-->
+          <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>spring-data-mongodb</artifactId>-->
+          <!--<groupId>org.springframework.data</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>log4j</artifactId>-->
+          <!--<groupId>log4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>raven-log4j</artifactId>-->
+          <!--<groupId>com.getsentry.raven</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>dubbo</artifactId>-->
+          <!--<groupId>com.alibaba</groupId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
+    <!--</dependency>-->
   </dependencies>
 
   <build>

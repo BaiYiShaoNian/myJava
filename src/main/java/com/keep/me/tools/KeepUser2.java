@@ -5,14 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
-/**
- * Create by huangxuanfeng on 2019/11/11 下午2:57
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class OtherUser extends User {
-    private String address;
+public class KeepUser2 extends User2 {
+    private int age;
+
+    //@Override
+    //public String toString() {
+    //    return "KeepUser2(name=" + this.getName() + ",age=" + this.getAge() + ")";
+    //}
 }
