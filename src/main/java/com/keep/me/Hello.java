@@ -1,19 +1,21 @@
 package com.keep.me;
 
 import com.keep.me.tools.Abc;
+import com.keep.me.tools.SportsInfo;
 import com.keep.me.tools.User;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import sun.jvm.hotspot.debugger.RandomAccessFileDataSource;
 
 import java.text.MessageFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -113,6 +115,73 @@ public class Hello {
         System.out.println(user.getName());
         System.out.println(user.getStatus());
 
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        Date date = new Date(1598345167L * 1000);
+        System.out.println(sdf.format(date));
+
+        SportsInfo sportsInfo = new SportsInfo();
+        System.out.println("start....");
+        System.out.println(sportsInfo.getCyclingData().getCalorie() + " " + sportsInfo.getCyclingData().getDuration());
+        System.out.println(sportsInfo.getHikingData().getCalorie() + " " + sportsInfo.getHikingData().getDuration());
+
+        String num = "234.90";
+        System.out.println(Double.valueOf(num).longValue());
+        System.out.println();
+
+        SimpleDateFormat sdf2 = new SimpleDateFormat("yyyyMMdd");
+        System.out.println(sdf2.format(new Date()));
+
+        double num2 = 1233.0;
+        double num3 = num2/7;
+        System.out.println(num3);
+
+        List<String> event = Arrays.asList("huang", "xuan");
+        System.out.println(event);
+
+        List<String> tmp2 = new ArrayList<>();
+        tmp2.add("shef");
+
+//        event = tmp2;
+//        event = tmp2.stream().collect(Collectors.toList());
+        event = new ArrayList<>(tmp2);
+        System.out.println(tmp2);
+        System.out.println(event);
+        tmp2.add("se2e2e");
+        System.out.println(tmp2);
+        System.out.println(event);
+
+        String table = "10";
+        System.out.println("1: " + table);
+        Hello hello = new Hello();
+        hello.test(table);
+        System.out.println("4: " + table);
+
+        String calc = "2 * index_3 - index_4 * index_10";
+        Pattern pattern = Pattern.compile("index_([0-9]+)");
+        Matcher matcher = pattern.matcher(calc);
+        while (matcher.find()) {
+            System.out.println("h: " + matcher.group(1));
+        }
+
+        date = new Date(0, 1, 0);
+        System.out.println(date);
+        org.apache.commons.lang.RandomStringUtils.randomNumeric(5);
+
+        Set<Integer> set = new HashSet<>();
+        Integer a = null;
+        set.add(a);
+        a = 123;
+        set.add(a);
+        System.out.println("a: " + a);
+
+        List<Abc> list3 = new ArrayList<>();
+        System.out.println(CollectionUtils.isNotEmpty(list3));
+    }
+
+    private void test(String table) {
+        System.out.println("2: " + table);
+        table = "200";
+        System.out.println("3: " + table);
     }
 
     public static List<String> collectLocalDates(String timeStart, String timeEnd){
